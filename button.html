@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button with Javascript</title>
+    <style>
+      #button {
+        width: 320px;
+        height: 48px;
+        display: block;
+        margin: 150px auto;
+        font-size: 25px;
+        outline-color: transparent;
+        background-color: white;
+        border-radius: 7px;
+        padding: 7.5px 10px;
+        transition: 0.15s;
+        border: 3px solid rgb(255, 30, 135);
+        box-shadow: 0 0 7px 3px rgb(255, 162, 177);
+      }
+      #button:hover {
+        background-color: rgb(255, 30, 135);
+        color: white;
+        box-shadow: none;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let clickCount = 0;
+      function increaseCount() {
+        clickCount++;
+        let buttonElement = document.querySelector("#button");
+        clickCount === 1
+          ? (buttonElement.innerHTML = `Click here ${clickCount} more time`)
+          : (buttonElement.innerHTML = `Click here ${clickCount} more times`);
+      }
+    </script>
+    <button id="button" onclick=" increaseCount()">
+      Click here to get rewarded
+    </button>
+  </body>
+</html>
